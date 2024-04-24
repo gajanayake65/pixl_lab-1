@@ -1,0 +1,181 @@
+html {
+  font-size: 62.5%;
+  /* 10px */ }
+
+body {
+  background-color: #445069;
+  height: 100%; }
+
+header {
+  background-image: url(back.png);
+  background-size: cover;
+  padding: 0 2rem; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #6a6868;
+  font-size: 2rem; }
+
+a:hover {
+  color: #3c4b79; }
+
+h1 {
+  font-size: 6rem;
+  color: #445069;
+  position: relative;
+  left: 35%;
+  align-items: baseline;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+span {
+  font-size: 5rem;
+  color: #5b9a8b;
+  align-items: last baseline; }
+
+.navbar {
+  width: 120%;
+  height: 10rem;
+  max-width: 114rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  left: 1rem; }
+  .navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold; }
+  .navbar .links {
+    display: flex;
+    gap: 2rem; }
+  .navbar .toggle_btn {
+    color: #6a6868;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; }
+
+.action_btn {
+  background-color: #6e90f7;
+  color: #f8f4f4;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 2.0rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: #0587de; }
+  .action_btn:hover {
+    scale: 1.05;
+    color: #283f88; }
+  .action_btn:active {
+    scale: 0.95; }
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 6.0rem;
+  height: 0;
+  width: 30.0rem;
+  background: rgba(71, 15, 213, 0.1);
+  border-radius: 1.0rem;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  .dropdown_menu .open {
+    height: 24.0rem; }
+  .dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+
+.h1 {
+  font-size: 3rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+#input_file {
+  display: none; }
+
+.button_drag {
+  --primary-green: #5B9A8B;
+  --primary-green-light: #87C0B3;
+  --primary-green-lighter: #91D1C2;
+  --width-and-height: 20rem;
+  position: relative;
+  left: 65rem;
+  display: inline-block;
+  width: var(--width-and-height);
+  height: var(--width-and-height);
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  border: 3px #fff dashed;
+  transition: all .2s ease;
+  font-family: "Fraunces" , sans-serif;
+  text-transform: capitalize;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem; }
+  .button_drag:hover {
+    --primary-green:  var(--primary-green-lighter); }
+  .button_drag:active {
+    transform: scale(0.95); }
+  .button_drag::before {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: " ";
+    width: calc( var(--width-and-height) + 7rem);
+    height: calc( var(--width-and-height) + 7rem);
+    background-color: var(--primary-green-light);
+    border-radius: 50%;
+    z-index: -50; }
+  .button_drag::after {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: " ";
+    width: calc( var(--width-and-height) + 13rem);
+    height: calc( var(--width-and-height) + 13rem);
+    border-radius: 50%;
+    background-color: var(--primary-green-lighter);
+    z-index: -100; }
+  .button_drag.drag_over {
+    background-color: var(--primary-green-lighter); }
+  .button_drag.error {
+    --primary-green: #ED5656;
+    --primary-green-light: #FC7C7C;
+    --primary-green-lighter: #FE8A8A; }
+    .button_drag.error .step, .button_drag.error .upload {
+      opacity: 0;
+      position: absolute; }
+  .button_drag .step, .button_drag .state {
+    text-align: center;
+    font-size: .5em; }
+  .button_drag .upload {
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    text-align: center; }
+  .button_drag .icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-bottom: 1rem;
+    fill: #ffff; }

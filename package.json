@@ -1,0 +1,16 @@
+{
+  "name": "project_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass ./sass/main.scss ./style.css -w",
+    "server": "live-server"
+    
+  },
+  "author": "Sahan Gajanayake",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
